@@ -39,7 +39,7 @@ func (b *Backoff) Delay() time.Duration {
 
 func (b *Backoff) Sleep() {
    delay := b.Delay()
-   nanolog.Debug("backing off %v", delay)
+   nanolog.Info("retrying in %v", delay)
    time.Sleep(delay)
 }
 
